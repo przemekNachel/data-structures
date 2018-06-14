@@ -33,4 +33,15 @@ public class LinkedListTest {
         Integer[] ints = {list.get(0), list.get(1), list.get(2)};
         Assert.assertArrayEquals(expected, ints);
     }
+
+    @Test
+    public void test_get2ValuesAfterRemove() {
+        list.append(0);
+        list.append(1);
+        list.append(2);
+        list.remove(0);
+        Integer[] expected = {1, 2};
+        Integer[] ints = {list.get(0), list.get(1)};
+        Assert.assertArrayEquals(expected, ints);
+    }
 }
