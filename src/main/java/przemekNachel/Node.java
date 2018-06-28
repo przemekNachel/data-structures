@@ -3,7 +3,7 @@ package przemekNachel;
 public class Node<T> {
 
     private T value;
-    private Node next;
+    private Node<T> next;
 
     public Node(T value) {
         this.value = value;

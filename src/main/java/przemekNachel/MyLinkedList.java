@@ -1,27 +1,27 @@
 package przemekNachel;
 
-public class MyLinkedList<T> {
+class MyLinkedList<T> {
 
     private Node<T> head;
     private Node<T> tail;
     private int maxIndex= -1;
 
-    public void append(T value) {
+    void append(T value) {
         if (head == null) {
-            head = new Node<T>(value);
+            head = new Node<>(value);
             tail = head;
         } else {
-            tail.setNext(new Node<T>(value));
+            tail.setNext(new Node<>(value));
             tail = tail.getNext();
         }
         maxIndex++;
     }
 
-    public T get(int index) {
-        return (T) getNode(index).getValue();
+    T get(int index) {
+        return getNode(index).getValue();
     }
 
-    public void remove(int index) {
+    void remove(int index) {
         if (index == 0) {
             head = head.getNext();
             maxIndex--;
@@ -31,7 +31,7 @@ public class MyLinkedList<T> {
             Node<T> previous = getNode(index - 1);
             previous.setNext(previous.getNext().getNext());
             maxIndex--;
-            for(int i = index; index < maxIndex; index++) previous = previous.getNext();
+            for(; index < maxIndex; index++) previous = previous.getNext();
             tail = previous.getNext();
             tail.setNext(null);
         }
