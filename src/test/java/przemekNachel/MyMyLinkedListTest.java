@@ -18,20 +18,20 @@ public class MyMyLinkedListTest {
 
     @Test
     public void test_addValue() {
-        list.append(1);
+        list.add(1);
     }
 
     @Test
     public void test_getValue() {
-        list.append(1);
+        list.add(1);
         Assert.assertEquals(new Integer(1), list.get(0));
     }
 
     @Test
     public void test_get3Values() {
-        list.append(0);
-        list.append(1);
-        list.append(2);
+        list.add(0);
+        list.add(1);
+        list.add(2);
         Integer[] expected = {0, 1, 2};
         Integer[] ints = {list.get(0), list.get(1), list.get(2)};
         Assert.assertArrayEquals(expected, ints);
@@ -39,9 +39,9 @@ public class MyMyLinkedListTest {
 
     @Test
     public void test_get2ValuesAfterRemove() {
-        list.append(0);
-        list.append(1);
-        list.append(2);
+        list.add(0);
+        list.add(1);
+        list.add(2);
 
         list.remove(0);
 
@@ -55,7 +55,7 @@ public class MyMyLinkedListTest {
         LinkedList<Integer> expected = new LinkedList<>();
         for (int i = 0; i < 5000; i++) {
             expected.add(i);
-            list.append(i);
+            list.add(i);
         }
         int[] removed = new int[2500];
         int max = 5000;

@@ -6,7 +6,7 @@ class MyLinkedList<T> {
     private Node<T> tail;
     private int maxIndex= -1;
 
-    void append(T value) {
+    void add(T value) {
         if (head == null) {
             head = new Node<>(value);
             tail = head;
