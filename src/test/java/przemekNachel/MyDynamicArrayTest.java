@@ -29,4 +29,14 @@ public class MyDynamicArrayTest {
             Assert.assertEquals(random, Integer.parseInt(myDynamicArray.get(random)));
         }
     }
+
+    @Test
+    public void test_removeOneElement() {
+        myDynamicArray.add("Hello");
+        myDynamicArray.add("World");
+
+        myDynamicArray.remove(0);
+
+        Assert.assertEquals("World", myDynamicArray.get(0));
+    }
 }

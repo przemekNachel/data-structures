@@ -26,4 +26,11 @@ public class MyDynamicArray<T> {
     public T get(int i) {
         return array[i];
     }
+
+    public void remove(int index) {
+        for (int i = index; i < maxIndex; i++) {
+            array[i] = array[i + 1];
+        }
+        array[maxIndex--] = null;
+    }
 }
