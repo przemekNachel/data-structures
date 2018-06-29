@@ -16,4 +16,18 @@ public class MyStack<T> {
     public T peek() {
         return array[topIndex];
     }
+
+    public T pop() {
+        T element = array[topIndex];
+        array[topIndex--] = null;
+        return element;
+    }
+
+    public int size() {
+        return array.length;
+    }
+
+    public int space() {
+        return array.length - topIndex - 1;
+    }
 }
