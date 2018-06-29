@@ -36,4 +36,18 @@ public class MyStackTest {
         Assert.assertEquals(10, myStack.size());
         Assert.assertEquals(7, myStack.space());
     }
+
+    @Test(expected = IndexOutOfBoundsException.class)
+    public void test_stackOverflow() {
+        for (int i = 0; i < 11; i ++) {
+            myStack.push("1");
+        }
+    }
+
+    @Test(expected = IndexOutOfBoundsException.class)
+    public void test_stackUnderflow() {
+        myStack.push("1");
+        myStack.pop();
+        myStack.pop();
+    }
 }
