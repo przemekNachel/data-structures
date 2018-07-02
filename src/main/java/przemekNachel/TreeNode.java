@@ -23,15 +23,17 @@ public class TreeNode {
     }
 
     public void setLeft(TreeNode node) {
-        if (left == null) left = node;
-        else if (node.getValue() <= left.getValue()) left.setLeft(node);
-        else if (node.getValue() > left.getValue()) left.setRight(node);
+//        if (left == null) left = node;
+//        else if (node.getValue() <= left.getValue()) left.setLeft(node);
+//        else if (node.getValue() > left.getValue()) left.setRight(node);
+        left = node;
     }
 
     public void setRight(TreeNode node) {
-        if (right == null) right = node;
-        else if (node.getValue() <= right.getValue()) right.setLeft(node);
-        else if (node.getValue() > right.getValue()) right.setRight(node);
+//        if (right == null) right = node;
+//        else if (node.getValue() <= right.getValue()) right.setLeft(node);
+//        else if (node.getValue() > right.getValue()) right.setRight(node);
+        right = node;
     }
 
     void inorderRec(TreeNode root) {
